@@ -62,15 +62,15 @@ function App() {
             <img
               src={slides[currentSlide].image}
               alt={slides[currentSlide].alt}
-              className="rounded-md w-[90%] mx-auto lg:w-[95%] lg:mx-0"
+              className="rounded-md w-[90%] mx-auto lg:w-[85%] xl:w-[80%] lg:mx-0"
             />
           </div>
-          <div className="bg-white py-3 rounded-full flex gap-6 justify-center items-center w-20 absolute left-0 right-0 mx-auto bottom-2 lg:bottom-5 lg:left-[20%] lg:mx-0 shadow-[rgba(32,32,70,0.25)_-20px_10px_40px_10px]">
+          <div className="bg-white py-3 rounded-full flex gap-6 justify-center items-center w-20 absolute left-0 right-0 mx-auto bottom-0 lg:left-[20%] lg:mx-0 shadow-[rgba(32,32,70,0.25)_-20px_10px_40px_10px]">
             <img src={iconPrev} alt="Previous slide" onClick={handlePrev} className="cursor-pointer"/>
             <img src={iconNext} alt="Next slide" onClick={handleNext} className="cursor-pointer"/>
           </div>
         </div>
-        <div className="sm:max-w-[35rem] sm:mx-auto lg:max-w-none lg:w-[90%] bg-pattern-quotes bg-no-repeat bg-[length:90px_110px] lg:bg-[length:90px_150px] bg-[50%_-20%] lg:bg-[20%_-30%] px-7 pt-7 pb-24 mt-10 lg:mt-0 lg:py-10 lg:translate-x-40">
+        <div className="sm:max-w-[35rem] sm:mx-auto lg:max-w-none lg:w-[90%] bg-pattern-quotes bg-no-repeat bg-[length:90px_110px] lg:bg-[length:90px_150px] bg-[50%_-20%] lg:bg-[20%_-30%] px-7 pt-7 pb-16 mt-10 lg:mt-0 lg:py-10 lg:translate-x-40">
           <div
             className={`transition-opacity duration-500 ease-in-out w-full ${
               isAnimating ? "opacity-0" : "opacity-100"
