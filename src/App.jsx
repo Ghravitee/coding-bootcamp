@@ -10,15 +10,7 @@ function App() {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const slides = [
-    {
-      image: john,
-      alt: "This is john, a junior frontend developer",
-      text: `&quot;If you want to lay the best foundation possible I’d recommend
-      taking this course. The depth the instructors go into is incredible. I
-      now feel so confident about starting up as a professional developer.&quot;`,
-      name: "John Tarkpor",
-      title: "Junior Front-end Developer",
-    },
+   
     {
       image: tanya,
       alt: "This is tanya, a UX engineer",
@@ -27,6 +19,15 @@ function App() {
       the job of my dreams and so excited about the future.&quot;`,
       name: "Tanya Sinclair",
       title: "UX Engineer",
+    },
+    {
+      image: john,
+      alt: "This is john, a junior frontend developer",
+      text: `&quot;If you want to lay the best foundation possible I’d recommend
+      taking this course. The depth the instructors go into is incredible. I
+      now feel so confident about starting up as a professional developer.&quot;`,
+      name: "John Tarkpor",
+      title: "Junior Front-end Developer",
     },
   ];
 
@@ -55,29 +56,29 @@ function App() {
       <div className="flex flex-col lg:flex-row-reverse lg:w-full lg:max-w-[80rem] items-center py-10">
         <div className="sm:max-w-[35rem] sm:mx-auto lg:max-w-none lg:w-[90%] bg-pattern-background bg-no-repeat bg-contain bg-top px-6 pt-3 flex justify-center items-center flex-col relative">
           <div
-            className={`transition-opacity duration-500 ease-in-out py-4 ${
+            className={`transition-opacity duration-500 ease-in-out py-8 ${
               isAnimating ? "opacity-0" : "opacity-100"
             }`}
           >
             <img
               src={slides[currentSlide].image}
               alt={slides[currentSlide].alt}
-              className="rounded-md w-[90%] mx-auto lg:w-[85%] xl:w-[80%] lg:mx-0"
+              className="rounded-md w-[90%] mx-auto lg:w-[85%] xl:w-[90%] lg:mx-0"
             />
           </div>
-          <div className="bg-white py-3 rounded-full flex gap-6 justify-center items-center w-20 absolute left-0 right-0 mx-auto bottom-0 lg:left-[20%] lg:mx-0 shadow-[rgba(32,32,70,0.25)_-20px_10px_40px_10px]">
+          <div className="bg-white py-3 rounded-full flex gap-6 justify-center items-center w-20 absolute left-0 right-0 mx-auto bottom-0 lg:bottom-[8px] lg:left-[20%] lg:mx-0 shadow-[rgba(32,32,70,0.25)_-20px_10px_40px_10px]">
             <img src={iconPrev} alt="Previous slide" onClick={handlePrev} className="cursor-pointer"/>
             <img src={iconNext} alt="Next slide" onClick={handleNext} className="cursor-pointer"/>
           </div>
         </div>
-        <div className="sm:max-w-[35rem] sm:mx-auto lg:max-w-none lg:w-[90%] bg-pattern-quotes bg-no-repeat bg-[length:90px_110px] lg:bg-[length:90px_150px] bg-[50%_-20%] lg:bg-[20%_-30%] px-7 pt-7 pb-16 mt-10 lg:mt-0 lg:py-10 lg:translate-x-40">
+        <div className="sm:max-w-[35rem] sm:mx-auto lg:max-w-none lg:w-[100%] bg-pattern-quotes bg-no-repeat bg-[length:90px_110px] lg:bg-[length:130px_150px] bg-[50%_-20%] lg:bg-[20%_-30%] px-7 pt-7 pb-16 mt-10 lg:mt-0 lg:py-10 lg:translate-x-28">
           <div
             className={`transition-opacity duration-500 ease-in-out w-full ${
               isAnimating ? "opacity-0" : "opacity-100"
             }`}
           >
             <p
-              className="text-center text-[1.2rem] lg:text-[2rem] inter-300 lg:text-left lg:mb-8"
+              className="text-center text-[1.2rem] lg:text-[2rem] xl:text-[2.1rem] inter-300 lg:text-left lg:mb-8"
               dangerouslySetInnerHTML={{ __html: slides[currentSlide].text }}
             />
             <div className="flex flex-col lg:flex-row gap-2 justify-center items-center lg:justify-start lg:items-start">
